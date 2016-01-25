@@ -14,18 +14,19 @@
     <link href="//cdn.bootcss.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
 </head>
 <body>
-test
+<div id="test1">loading......</div>
+<div id="test2">loading......</div>
 <script src="//cdn.bootcss.com/jquery/2.1.4/jquery.min.js"></script>
 <script src="//cdn.bootcss.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
 <script src="//cdn.bootcss.com/angular.js/1.5.0-rc.0/angular.min.js"></script>
 <script src="/js/bigpipe.js"></script>
 <script>
     var bigpipe=new Bigpipe();
-    bigpipe.ready('test1',function(data){
-
+    bigpipe.ready('pagelet1',function(data){
+        $("#test1").html(data.is);
     })
-    bigpipe.ready('test2',function(data){
-
+    bigpipe.ready('pagelet2',function(data){
+        $("#test2").html("test2 ready");
     })
 </script>
 </body>
